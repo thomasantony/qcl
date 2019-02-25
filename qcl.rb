@@ -6,12 +6,12 @@ class Qcl < Formula
   version "1.0.0"
 
   depends_on "perl"
-  depends_on "cpanminus"
 
   bottle :unneeded
 
   def install
-    system "cpanm", "-n", "Net::Telnet"
+    system "(echo y;echo o conf prerequisites_policy follow;echo o conf commit)|cpan"
+    system "cpan", "-i", "Net::Telnet"
     bin.install "qcl"
   end
 end
