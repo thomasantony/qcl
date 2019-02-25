@@ -11,7 +11,7 @@ class Qcl < Formula
   bottle :unneeded
 
   def install
-    system "cpanm", "Net::Telnet"
+    system "cpanm", "-n", "Net::Telnet"
     bin.install "qcl"
   end
 end
